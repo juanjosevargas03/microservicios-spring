@@ -1,5 +1,0 @@
-package com.spring.shopping.service;
-
-public interface InvoiceService {
-
-}

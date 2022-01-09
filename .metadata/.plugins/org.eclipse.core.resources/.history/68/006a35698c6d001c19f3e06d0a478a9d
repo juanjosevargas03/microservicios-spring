@@ -1,5 +1,0 @@
-package com.spring.customer.repository;
-
-public class CustomerRepository {
-
-}
