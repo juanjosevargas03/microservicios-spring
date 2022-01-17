@@ -4,16 +4,19 @@ package com.spring.shopping.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.Positive;
+
+import com.spring.shopping.model.Product;
+
 import java.io.Serializable;
 
-@Entity
 //@Data
+@Entity
 @Table(name = "tbl_invoce_items")
 public class InvoiceItem  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long invoice_id;
+    private Long id;
     @Positive(message = "El stock debe ser mayor que cero")
     private Double quantity;
     private Double  price;
@@ -25,8 +28,8 @@ public class InvoiceItem  {
     @Transient
     private Double subTotal;
 
-    //@Transient
-    //private Product product;
+    @Transient
+    private Product product;
 
     public Double getSubTotal(){
         if (this.price >0  && this.quantity >0 ){
@@ -43,18 +46,26 @@ public class InvoiceItem  {
 	public InvoiceItem(Long id, @Positive(message = "El stock debe ser mayor que cero") Double quantity, Double price,
 			Long productId, Double subTotal) {
 		super();
-		this.invoice_id = id;
+		this.id = id;
 		this.quantity = quantity;
 		this.price = price;
 		this.productId = productId;
 		this.subTotal = subTotal;
 	}
 	
-	public Long getInvoice_id() {
-		return invoice_id;
+	public Long getId() {
+		return id;
 	}
-	public void setInvoice_id(Long invoice_id) {
-		this.invoice_id = invoice_id;
+	public void setId(Long invoice_id) {
+		this.id = invoice_id;
+	}
+	
+	
+	public Product getProduct() {
+		return product;
+	}
+	public void setProduct(Product product) {
+		this.product = product;
 	}
 	public Double getQuantity() {
 		return quantity;

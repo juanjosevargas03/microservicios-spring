@@ -21,6 +21,7 @@ import javax.persistence.Transient;
 import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.spring.shopping.model.Customer;
 
 //@Data
 @Entity
@@ -54,8 +55,8 @@ public class Invoice {
 
     private String state;
 
-    //@Transient
-    //private Customer customer;
+    @Transient
+    private Customer customer;
 
     public Invoice(){
         items = new ArrayList<>();
@@ -84,6 +85,15 @@ public class Invoice {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+	
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
 
 	public String getNumberInvoice() {

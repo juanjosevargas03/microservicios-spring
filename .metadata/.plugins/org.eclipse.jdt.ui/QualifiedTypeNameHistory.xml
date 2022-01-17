@@ -14,4 +14,11 @@
     <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
     <fullyQualifiedTypeName name="com.spring.product.entity.Category"/>
     <fullyQualifiedTypeName name="com.spring.customer.repository.entity.Region"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.EnableEurekaClient"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.EnableFeignClients"/>
+    <fullyQualifiedTypeName name="com.spring.shopping.client.CustomerClient"/>
+    <fullyQualifiedTypeName name="com.spring.shopping.client.ProductClient"/>
+    <fullyQualifiedTypeName name="com.spring.shopping.model.Customer"/>
+    <fullyQualifiedTypeName name="com.spring.shopping.model.Product"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.client.discovery.EnableDiscoveryClient"/>
 </qualifiedTypeNameHistroy>
