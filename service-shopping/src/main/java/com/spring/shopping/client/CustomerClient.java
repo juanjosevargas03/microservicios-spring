@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.spring.shopping.model.Customer;
 
-@FeignClient(name = "service-customer")
+@FeignClient(name = "service-customer", fallback = CustomerHystrixFallbackFactory.class)
 public interface CustomerClient {
 
-    //@GetMapping(value = "/{id}")
     @RequestMapping(method =  RequestMethod.GET,value = "/customers/{id}")
     public ResponseEntity<Customer> getCustomer(@PathVariable("id") long id);
 }

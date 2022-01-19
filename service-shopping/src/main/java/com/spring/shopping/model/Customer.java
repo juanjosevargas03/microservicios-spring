@@ -23,6 +23,14 @@ public class Customer {
 
     public Customer() {};
     
+	public Customer(String firstName, String lastName, String email, String photoUrl) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.photoUrl = photoUrl;
+	}
+
 	public Customer(Long id, String numberID, String firstName, String lastName, String email, String photoUrl,
 			Region region, String state) {
 		super();
